@@ -2,7 +2,7 @@
 
 double Pk1 = .2;
 double Ik1 = 0;
-double Dk1 = 0.0;  //.01
+double Dk1 = 0.0;
 
 double Setpoint1, Input1, Output1, Output1a;
 PID PID1(&Input1, &Output1, &Setpoint1, Pk1, Ik1, Dk1, DIRECT);
@@ -56,7 +56,7 @@ void loop() {
     if (Serial.available() > 0) {
       char c = Serial.read();
       if (c == 'a') {
-        demand1 = 500;  //calibrate to encoder count for 1 m
+        demand1 = 500;
         //Serial.println("Received 'a' ***********");
         standbyMillis = currentMillis;
       } else if (c == 'z') {
