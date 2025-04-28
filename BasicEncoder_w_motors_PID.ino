@@ -24,7 +24,6 @@ int motorPin2 = 26;
 int pwmPin1 = 27;
 
 const int freq = 500;
-const int ledChannel1 = 1;
 const int resolution = 8;
 
 void setup() {
@@ -32,9 +31,7 @@ void setup() {
   pinMode(motorPin2, OUTPUT);
   pinMode(pwmPin1, OUTPUT);
 
-  ledcSetup(ledChannel1, freq, resolution);
-
-  ledcAttachPin(pwmPin1, ledChannel1);
+  ledcAttach(pwmPin1, freq, resolution);
 
   pinMode(encoder0PinA, INPUT_PULLUP);
   pinMode(encoder0PinB, INPUT_PULLUP);
@@ -82,16 +79,16 @@ void loop() {
     //motor1
     if (Output1 > 0) {  //90??
       Output1a = abs(Output1);
-      ledcWrite(ledChannel1, Output1a);
+      ledcWrite(pwmPin1, Output1a);
       digitalWrite(motorPin1, HIGH);
       digitalWrite(motorPin2, LOW);
     } else if (Output1 < 0) {  //-90??
       Output1a = abs(Output1);
-      ledcWrite(ledChannel1, Output1a);
+      ledcWrite(pwmPin1, Output1a);
       digitalWrite(motorPin1, LOW);
       digitalWrite(motorPin2, HIGH);
     } else {
-      ledcWrite(ledChannel1, 0);
+      ledcWrite(pwmPin1, 0);
       digitalWrite(motorPin1, LOW);
       digitalWrite(motorPin2, LOW);
     }
