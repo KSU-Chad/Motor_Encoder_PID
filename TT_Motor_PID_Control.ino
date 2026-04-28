@@ -11,8 +11,8 @@
 #define PIN_IN1   26
 #define PIN_IN2   25
 #define PIN_ENA   27
-#define PIN_ENC_A 32
-#define PIN_ENC_B 33
+#define PIN_ENC_A 33
+#define PIN_ENC_B 32
 
 // ── PWM Config ───────────────────────────────────────────────────
 #define PWM_FREQ   20000  // 20kHz — silent
