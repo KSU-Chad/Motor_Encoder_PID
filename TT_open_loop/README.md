@@ -1,4 +1,4 @@
-# Open Loop Velocity Control
+# Activity 1 — Open Loop Velocity Control
 
 Fixed PWM output with no feedback. The motor runs at a constant duty cycle regardless of load. Use this sketch to observe how mechanical load reduces motor speed when there is no corrective action.
 
