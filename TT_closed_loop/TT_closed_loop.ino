@@ -28,7 +28,7 @@
 // Set this to your target speed in encoder counts per second.
 // Tip: run Activity 1 first, note the no-load speed at PWM=150,
 // then set this to ~80% of that value so PID has headroom to push.
-double velocitySetpoint = 700.0;  // counts/second — adjust to your motor
+double velocitySetpoint = 2700.0;  // counts/second — adjust to your motor
 
 // ── PID Gains ────────────────────────────────────────────────────
 // Velocity PID tunes differently than position PID:
@@ -207,7 +207,8 @@ void loop() {
     setMotor(output);
 
     // Serial Plotter — two traces
-    Serial.print("Setpoint:"); Serial.print(velocitySetpoint);
+    Serial.print("Output:"); Serial.print(outputx10);
+    Serial.print(",Setpoint:"); Serial.print(velocitySetpoint);
     Serial.print(",Velocity:"); Serial.println(velocity);
   }
 }
