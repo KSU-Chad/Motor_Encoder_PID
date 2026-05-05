@@ -207,7 +207,7 @@ void loop() {
     setMotor(output);
 
     // Serial Plotter — two traces
-    Serial.print("Output:"); Serial.print(outputx10);
+    Serial.print("Output:"); Serial.print(output*10);
     Serial.print(",Setpoint:"); Serial.print(velocitySetpoint);
     Serial.print(",Velocity:"); Serial.println(velocity);
   }
