@@ -47,7 +47,7 @@ double integral    = 0.0;
 double output      = 0.0;
 
 #define INTEGRAL_LIMIT  200.0   // tighter limit than position — velocity responds faster
-#define OUTPUT_MIN       30.0   // minimum PWM to keep motor spinning (deadband floor)
+#define OUTPUT_MIN      180.0   // minimum PWM to keep motor spinning (deadband floor)
 #define OUTPUT_MAX      255.0
 
 // ── Encoder ──────────────────────────────────────────────────────
