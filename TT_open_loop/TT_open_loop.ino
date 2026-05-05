@@ -24,7 +24,7 @@
 // ── Open Loop Speed Setting ──────────────────────────────────────
 // Adjust this value (0-255) to set motor speed
 // Start around 150 — enough speed to show a clear drop under load
-int pwmDuty = 150;
+int pwmDuty = 180;
 
 // ── Velocity Measurement ─────────────────────────────────────────
 #define VELOCITY_INTERVAL_MS 100  // measure velocity every 100ms
