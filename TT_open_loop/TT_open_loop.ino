@@ -98,7 +98,7 @@ void loop() {
 
     // Plot a flat "setpoint" line so students can see the drop clearly
     // Value is the no-load velocity — measure this first and set it here
-    double velocitySetpoint = 800.0;  // update after measuring no-load speed
+    double velocitySetpoint = 2800.0;  // update after measuring no-load speed
 
     // Serial Plotter — two traces: target and actual
     Serial.print("Setpoint:"); Serial.print(velocitySetpoint);
